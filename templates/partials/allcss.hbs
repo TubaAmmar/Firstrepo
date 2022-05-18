@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html, body{
+  height: 100%; 
+  width: 100%;
+  font-family: 'poppins', sans-serif ;
+  color: rgb(14, 12, 12);
+  background-color: rgb(252, 252, 252);
+  
+}
+.header{background-color: rgb(243, 247, 248); display: flex;  height:70px; color: black; border-bottom: 1px solid rgb(31, 30, 30, 0.2); }
+
+.header2 a{color: black; margin-left: 1rem; font-weight: 700; }
+.header2{padding: 1rem; border-bottom: 1px solid rgb(31, 30, 30, 0.2); }
+
+
+.logo a{text-decoration: none; color: rgb(13, 13, 14); font-size: 25px; font-weight: 500; }
+
+.items1{display: flex; align-items: center; justify-content: center; margin-top: 1rem;  }
+      .sec-list{display: flex; justify-content: space-between; list-style: none; align-items: center; gap: 1.5rem;  color: #f0f0f0; display: none; }
+      .sec-link:link,
+      .sec-link:visited{display: inline-block; text-decoration: none; color: rgb(240, 226, 226); font-size: 1.5rem; font-weight: 500; transition: all 0.3s;}
+      .sec-link:hover{color: rgb(159, 120, 12);}
+
+
+.fas .fa-search{color: #fff;}
+
+.header .menu-icon {width: 40px; color: #fff; text-align: center; font-size: 18px; cursor: pointer;  }
+.header .menu-icon span,
+.header .menu-icon,
+.header .menu-icon1{display: none;}
+
+.sec-link{border-bottom: 1px solid white; width: 200px; margin-bottom: .5rem; margin-left: 2%;}
+
+.items1{position: relative; left: 20%;}
+.logo{position: relative; left: 10%; margin-top: 1rem;}
+
+
+
+.menu-cart, .menu-user{color: rgb(12, 11, 11); width: 20px;}
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: 70%;  }
+.searchbox, .menu-user, .menu-cart{margin-left: 1rem; margin-right: 1rem;}
+
+
+.searchbox{display: flex; align-items: center; justify-content: center; position: relative;transition: all 0.5s linear;}
+.searchtext{transition: all 0.7s linear; background-color: black; display: none; }
+.searchbox input{width: 300px;  }
+.search-icon{color: black;}
+.searchbox a{ color: #fff; width: 1rem;  font-size: 20px; }
+.searchbox:hover > .searchtext{ width:90%; transition: all 0.5s linear; padding: .9rem; background-color: #fff; display: block;}
+
+.searchbox:hover{position: fixed; left: 0%; right: 0; z-index: 1; }
+.searchbox:hover > .searchbtn{font-size: 25px; margin-left: .5rem; position: absolute; right: 10%; color: black; font-size: 25px; margin-left: .5rem;}
+
+
+
+.heading{font-weight: 600; font-size: 40px; margin-top: 2rem;}
+.f1 label{margin-left:2rem; margin-top: 1rem; font-size: 16px; font-weight: 500;}
+.f1 input{margin-left: 2rem; border: 0px; border-bottom: 1px solid black; width: 80%; padding:.8rem ;}
+.f1 .para1{margin-left: 17rem; font-size: 15px; font-weight: 500; margin-top: .7rem; }
+.f1 .button1{width: 90%; margin-left: 1rem; margin-top: 1rem; background-color: black; color: azure;}
+.f1 .button1:hover{color: black; background-color: #fff; border: 1px solid black;}
+.account{display: flex;}
+.account a{text-decoration: line-through; color: blue;}
+.para2{font-size: 15px; font-weight: 500; margin-top: 1.5rem;}
+.para3{font-size: 15px; font-weight: 500; margin-top: 1.5rem; margin-left: 6rem;}
+.para4{ margin-left: .5rem; color: rgb(55, 55, 175); margin-top: 1.5rem; font-size: 17px; font-weight: 500; text-decoration: double; }
+
+
+.carousel-inner img {height: 100%; width: 100%;}
+.img1{width: 100%; height: 600px; }
+.sec1{position: relative; top: -5rem; margin-left: 2rem;}
+.sec2{position: relative; top: -5rem; margin-left: 2rem;}
+.f1{display: flex; flex-wrap: wrap; }
+.f2{display: flex; flex-wrap: wrap;}
+
+.border1{background-color: rgb(4, 2, 2,0.2); padding: 1rem;}
+
+.card{background-color: white;  border: none; margin-left: 1.9rem; }
+.card-img{background-color: white; padding: 1rem;}
+.card-body{background-color: white;}
+.makeup1{display: flex; flex-wrap: wrap;}
+.i1{width: 214px; height: 214px; transition: all 1s linear; overflow: hidden;}
+
+.i1:hover{transform: scale(1.3);}
+.m1{position: relative; font-weight: 600;}
+.m1::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 27%; z-index: -2;}
+.m1::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 27%; z-index: -2;}
+
+.m2{position: relative; font-weight: 600;}
+.m2::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 32%; z-index: -2;}
+.m2::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 32%; z-index: -2;}
+
+.m3{position: relative; font-weight: 600;}
+.m3::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 35%; z-index: -2;}
+.m3::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 35%; z-index: -2;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+@media (max-width:1140px){
+  .header{padding: 0px;}
+  .header .logo{flex: 2; text-align: center; z-index: 1;}
+  .header2{display: none;}
+  
+
+  .items1 {height: 100%; width: 0; position: fixed; top: 0; left: 0; z-index: 1; background-color: rgb(13, 14, 15); display: flex; align-items: center; justify-content: center;  transition: all 0.3s linear; overflow-x: hidden; padding-top: 60px; }
+   .sec-list{flex-direction: column; list-style: none; margin-top: 1rem; font-size: 30px; align-items: center; justify-content: center; font-weight: 500; color: rgb(243, 236, 236);}
+  
+   .items1 .menu-icon1{position: absolute; top: 10px; right: 50px; font-size: 36px; margin-left: 50px; color: #fff;}
+  
+
+.menu-icon{position: relative; left: 4%; top: 25%;}
+.logo{position: relative; left: 2%; margin-top: 1rem;}
+
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: -3%;}
+.searchbox, .menu-user, .menu-cart{margin-left: .5rem; margin-right: .5rem;}
+.menu-cart{margin-left: .3rem; margin-right: .6rem;}
+.menu-user{margin-left: .7rem;}
+
+.searchbox:hover > .searchtext{ width: 100%; transition: all 0.5s linear; padding: .9rem; background-color: #fff; display: block;}
+.searchbox:hover{position: fixed; left: 0%; right: 0; z-index: 1; }
+.searchbox:hover > .searchbtn{font-size: 25px; margin-left: .5rem; position: absolute; right: 10%; color: black;}
+
+.sec1{position: relative; top: -2rem;}
+
+
+  
+  
+  
+  .header .menu-icon span{display: block;}
+  .header .menu-icon{display: block;}
+  .header .menu-icon1{display: block;}
+  .header .menu-icon{display: block;}
+  .header .menu-search{display: block;}}
+@media (max-width:414px){
+  .menu-icon{position: relative; left: 4%; top: 25%;}
+.logo{position: relative; left: 1%; margin-top: 1rem;}
+.items1{display: block; color: #f0f0f0;}
+.sec-list{display: block; color: #f0f0f0;}
+.header2{display: none;}
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: -3%;}
+.searchbox, .menu-user, .menu-cart{margin-left: .5rem; margin-right: .5rem;}
+.menu-cart{margin-left: .3rem; margin-right: .6rem;}
+.menu-user{margin-left: .7rem;}
+.f1 .para1{margin-left: 11rem; }
+.f1 .para3{margin-left: 3.5rem;}
+.card{width: 140px; margin-left: .3rem;}
+.i1{width: 140px;}
+.m1{font-size: 25px;}
+.p1{}
+
+
+
+}
+</style>
+
+</head>
+<body>
+    
+</body>
+</html>

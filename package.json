@@ -1,0 +1,16 @@
+{
+  "name": "expressbythapa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node expressbythapa/app.js"
+  },
+  "author": "tuba Ammar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0"
+  }
+}

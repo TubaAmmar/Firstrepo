@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="file:///E:/font-awesome/css/all.css" >
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html, body{
+height: 100%; 
+width: 100%;
+font-family: 'poppins', sans-serif ;
+color: rgb(14, 12, 12);
+background-color: rgb(252, 252, 252);
+
+}
+.header{background-color: rgb(243, 247, 248); display: flex;  height:70px; color: black; border-bottom: 1px solid rgb(31, 30, 30, 0.2); }
+
+.header2 a{color: black; margin-left: 1rem; font-weight: 700; }
+.header2{padding: 1rem; border-bottom: 1px solid rgb(31, 30, 30, 0.2); }
+
+
+.logo a{text-decoration: none; color: rgb(13, 13, 14); font-size: 25px; font-weight: 500; }
+
+.items1{display: flex; align-items: center; justify-content: center; margin-top: 1rem;  }
+  .sec-list{display: flex; justify-content: space-between; list-style: none; align-items: center; gap: 1.5rem;  color: #f0f0f0; display: none; }
+  .sec-link:link,
+  .sec-link:visited{display: inline-block; text-decoration: none; color: rgb(240, 226, 226); font-size: 1.5rem; font-weight: 500; transition: all 0.3s;}
+  .sec-link:hover{color: rgb(159, 120, 12);}
+
+
+.fas .fa-search{color: #fff;}
+
+.header .menu-icon {width: 40px; color: #fff; text-align: center; font-size: 18px; cursor: pointer;  }
+.header .menu-icon span,
+.header .menu-icon,
+.header .menu-icon1{display: none;}
+
+.sec-link{border-bottom: 1px solid white; width: 200px; margin-bottom: .5rem; margin-left: 2%;}
+
+.items1{position: relative; left: 20%;}
+.logo{position: relative; left: 10%; margin-top: 1rem;}
+
+
+
+.menu-cart, .menu-user{color: rgb(12, 11, 11); width: 20px;}
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: 70%;  }
+.searchbox, .menu-user, .menu-cart{margin-left: 1rem; margin-right: 1rem;}
+
+
+.searchbox{display: flex; align-items: center; justify-content: center; position: relative;transition: all 0.5s linear;}
+.searchtext{transition: all 0.7s linear; background-color: black; display: none; }
+.searchbox input{width: 300px;  }
+.search-icon{color: black;}
+.searchbox a{ color: #fff; width: 1rem;  font-size: 20px; }
+.searchbox:hover > .searchtext{ width:90%; transition: all 0.5s linear; padding: .9rem; background-color: #fff; display: block;}
+
+.searchbox:hover{position: fixed; left: 0%; right: 0; z-index: 1; }
+.searchbox:hover > .searchbtn{font-size: 25px; margin-left: .5rem; position: absolute; right: 10%; color: black; font-size: 25px; margin-left: .5rem;}
+
+
+
+.heading{font-weight: 600; font-size: 40px; margin-top: 2rem;}
+.f1 label{margin-left:2rem; margin-top: 1rem; font-size: 16px; font-weight: 500;}
+.f1 input{margin-left: 2rem; border: 0px; border-bottom: 1px solid black; width: 80%; padding:.8rem ;}
+.f1 .para1{margin-left: 17rem; font-size: 15px; font-weight: 500; margin-top: .7rem; }
+.f1 .button1{width: 90%; margin-left: 1rem; margin-top: 1rem; background-color: black; color: azure;}
+.f1 .button1:hover{color: black; background-color: #fff; border: 1px solid black;}
+.account{display: flex;}
+.account a{text-decoration: line-through; color: blue;}
+.para2{font-size: 15px; font-weight: 500; margin-top: 1.5rem;}
+.para3{font-size: 15px; font-weight: 500; margin-top: 1.5rem; margin-left: 6rem;}
+.para4{ margin-left: .5rem; color: rgb(55, 55, 175); margin-top: 1.5rem; font-size: 17px; font-weight: 500; text-decoration: double; }
+
+
+.carousel-inner img {height: 100%; width: 100%;}
+.img1{width: 100%; height: 600px; }
+.sec1{position: relative; top: -5rem; margin-left: 2rem;}
+.sec2{position: relative; top: -5rem; margin-left: 2rem;}
+.f1{display: flex; flex-wrap: wrap; }
+.f2{display: flex; flex-wrap: wrap;}
+
+.border1{background-color: rgb(4, 2, 2,0.2); padding: 1rem;}
+
+.card{background-color: white;  border: none; margin-left: 1.9rem; }
+.card-img{background-color: white; padding: 1rem;}
+.card-body{background-color: white;}
+.makeup1{display: flex; flex-wrap: wrap;}
+.i1{width: 214px; height: 214px; transition: all 1s linear; overflow: hidden;}
+
+.i1:hover{transform: scale(1.3);}
+.m1{position: relative; font-weight: 600;}
+.m1::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 27%; z-index: -2;}
+.m1::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 27%; z-index: -2;}
+
+.m2{position: relative; font-weight: 600;}
+.m2::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 32%; z-index: -2;}
+.m2::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 32%; z-index: -2;}
+
+.m3{position: relative; font-weight: 600;}
+.m3::before{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; left: 35%; z-index: -2;}
+.m3::after{content: ""; width: 120px; height: 3px; display: block; background: black; position: absolute; top: 50%; right: 35%; z-index: -2;}
+
+
+
+@media (max-width:1140px){
+  .header{padding: 0px;}
+  .header .logo{flex: 2; text-align: center; z-index: 1;}
+  .header2{display: none;}
+  
+
+  .items1 {height: 100%; width: 0; position: fixed; top: 0; left: 0; z-index: 1; background-color: rgb(13, 14, 15); display: flex; align-items: center; justify-content: center;  transition: all 0.3s linear; overflow-x: hidden; padding-top: 60px; }
+   .sec-list{flex-direction: column; list-style: none; margin-top: 1rem; font-size: 30px; align-items: center; justify-content: center; font-weight: 500; color: rgb(243, 236, 236);}
+  
+   .items1 .menu-icon1{position: absolute; top: 10px; right: 50px; font-size: 36px; margin-left: 50px; color: #fff;}
+  
+
+.menu-icon{position: relative; left: 4%; top: 25%;}
+.logo{position: relative; left: 2%; margin-top: 1rem;}
+
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: -3%;}
+.searchbox, .menu-user, .menu-cart{margin-left: .5rem; margin-right: .5rem;}
+.menu-cart{margin-left: .3rem; margin-right: .6rem;}
+.menu-user{margin-left: .7rem;}
+
+.searchbox:hover > .searchtext{ width: 100%; transition: all 0.5s linear; padding: .9rem; background-color: #fff; display: block;}
+.searchbox:hover{position: fixed; left: 0%; right: 0; z-index: 1; }
+.searchbox:hover > .searchbtn{font-size: 25px; margin-left: .5rem; position: absolute; right: 10%; color: black;}
+
+.sec1{position: relative; top: -2rem;}
+
+
+  
+  
+  
+  .header .menu-icon span{display: block;}
+  .header .menu-icon{display: block;}
+  .header .menu-icon1{display: block;}
+  .header .menu-icon{display: block;}
+  .header .menu-search{display: block;}}
+@media (max-width:414px){
+  .menu-icon{position: relative; left: 4%; top: 25%;}
+.logo{position: relative; left: 1%; margin-top: 1rem;}
+.items1{display: block; color: #f0f0f0;}
+.sec-list{display: block; color: #f0f0f0;}
+.header2{display: none;}
+.responsive1{display: flex; justify-content:center; align-items: center; position: relative; left: -3%;}
+.searchbox, .menu-user, .menu-cart{margin-left: .5rem; margin-right: .5rem;}
+.menu-cart{margin-left: .3rem; margin-right: .6rem;}
+.menu-user{margin-left: .7rem;}
+.f1 .para1{margin-left: 11rem; }
+.f1 .para3{margin-left: 3.5rem;}
+.card{width: 140px; margin-left: .3rem;}
+.i1{width: 140px;}
+.m1{font-size: 25px;}
+.p1{}
+
+
+
+}
+</style>
+</head>
+<body>
+     <header class="header ">
+        
+        <div class="menu-icon" onclick="openNav()" ><span class="fas fa-bars" style="color: black;"></span></div>
+        <div class="logo text-center "><a href=""  >PhantomStore</a></div>
+
+        <section class="items1" id="mysection">
+            <ul class="sec-list" >
+                <div  class="menu-icon1" onclick="closeNav()"><span class="fas fa-times"></span></div>
+                <li> <a href="Mainpage.html" class="sec-link"> Home</a></li>
+                <li> <a href="" class="sec-link" > Shop All</a></li>
+                <li><a href="" class="sec-link"> New Arrival</a></li>
+                <li><a href="" class="sec-link">Flash Deals</a></li>
+                <li><a href="" class="sec-link">Brands</a></li>
+                <li><a href="makeupproduct.html" class="sec-link">Makeup</a></li>
+                <li><a href="skincareproduct.html" class="sec-link">Skin Care</a></li>
+                <li><a href="" class="sec-link">Hair Care</a></li>
+                <li><a href="" class="sec-link">Bags</a></li>
+                <li><a href="" class="sec-link">Perfumes</a></li>
+                <li><a href="" class="sec-link">Watches</a></li>
+                <li><a href="" class="sec-link" style="margin-bottom: 7rem;">More</a></li>
+            </ul>
+         </section>
+
+      
+    
+   <div class="responsive1">
+         <div class="searchbox">
+            <input type="text" placeholder="&#xF007; &nbsp; Search Here" class="searchtext">
+            <a href="" class="searchbtn"><span class="fas fa-search" style="color: black;" ></span></a>
+        </div>
+        
+        <div class="menu-user" data-toggle="modal" data-target="#mymodal"><span class="fas fa-user"  onclick="mylogin()"></span></div>
+
+    <a href="" class="menu-cart" ><span class="fas fa-shopping-cart search-icon"></a></div>
+
+
+   
+
+    
+
+    
+ 
+
+</header>
+
+<div class="header2">
+    <div class="container">
+    <a href="Mainpage.html" >Home</a>
+    <a href="#" >Shop All</a>
+    <a href="#" >New Arrival</a>
+    <a href="#" >Flash Deals</a>
+    <a href="#" >Brands</a>
+    <a href="makeupproduct.html" >Make Up</a>
+    <a href="skincareproduct.html" >Skin Care</a>
+    <a href="#" >Hair Care</a>
+    <a href="#" >Perfumes</a>
+    <a href="#" >Bags</a>
+    <a href="#" >Watches</a>
+    <a href="#" >More</a>
+</div>
+</div>
+
+<!--Popup Login-->
+<div class="modal fade" role="dialog" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-center heading">Login</h4>
+                <form class="f1">
+                    <label>User-name</label><br>
+                    <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" ><br>
+                    <label>Password</label><br>
+                    <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;"><br>
+                    <p class="para1">Forgot password?</p>
+                    <button type="button" class="btn btn-sucess text-center button1">LogIn
+                
+                </button>
+                <div class="account"> 
+                <p class="para3 text-center">Don't have an account?</p>
+                <span data-toggle="modal" data-target="#mymodal2" class="para4" id="mysignup" onclick="mysignup()" ><a>Sign Up</a></span></div>
+                    
+                
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" role="dialog" id="mymodal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-body">
+            <h2 class=" " style="margin-left: 1.5rem; margin-top: 2rem;">Create an Account</h2>
+            <form class="f1">
+                <label>Name</label> 
+                <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" ><br>
+                
+                <label>Email Address</label>
+                <input type="email" placeholder=" &#xF0e0; &nbsp; your email address" style="font-family: arial, fontawesome;"><br>
+
+                <label>Phone No.</label>
+                <input type="number" placeholder=" &#xf879; &nbsp; your phone #" style="font-family: arial, fontawesome;">
+
+                <label>Password </label>
+                <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;" id="mypassword" > 
+           
+                <span style="position: absolute; top: 75%; right: 20%;" ><i class="fa fa-eye" id="eye"  ></i></span>
+                
+                <button type="button" class="btn btn-sucess text-center button1" style="margin-top: 2rem; margin-bottom: 2rem;">Create an Account
+            
+        </button>
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="my-5"></div>
+<h3 class="container m1 text-center" >Makeup Products</h3>
+
+<div class="my-4"></div>
+<div class="container">
+    <div class="makeup1">
+        
+            <div class="card">
+                <div class="card-img text-center">
+                   <a href="mp1.html"><img src="img/makeup/2.jpg "  class="i1"></a></div> 
+                    <div class="card-body">
+                    <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                    </div>
+                </div>
+            
+
+            
+                <div class="card">
+                    <div class="card-img text-center">
+                        <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                        <div class="card-body">
+                        <p  style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                        </div>
+                    </div>
+               
+
+               
+                    <div class="card">
+                        <div class="card-img text-center">
+                            <a href="health.html"><img src="img/makeup/2.jpg " class="i1" ></a></div>
+                            <div class="card-body">
+                            <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                <div class="card-body">
+                                <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                </div>
+                            </div>
+                </div>
+         </div>
+
+         <!--2-->
+         <div class="my-4"></div>
+         <div class="container">
+            <div class="makeup1">
+                
+                    <div class="card">
+                        <div class="card-img text-center">
+                           <a href="mp1.html"><img src="img/makeup/2.jpg "  class="i1"></a></div> 
+                            <div class="card-body">
+                            <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                            </div>
+                        </div>
+                    
+        
+                    
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                <div class="card-body">
+                                <p  style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                </div>
+                            </div>
+                       
+        
+                       
+                            <div class="card">
+                                <div class="card-img text-center">
+                                    <a href="health.html"><img src="img/makeup/2.jpg " class="i1" ></a></div>
+                                    <div class="card-body">
+                                    <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                    </div>
+                                </div>
+                            
+        
+                            
+                                <div class="card">
+                                    <div class="card-img text-center">
+                                        <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                        <div class="card-body">
+                                        <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                        </div>
+                                    </div>
+                        </div>
+                 </div>
+
+                   <!--3-->
+         <div class="my-4"></div>
+         <div class="container">
+            <div class="makeup1">
+                
+                    <div class="card">
+                        <div class="card-img text-center">
+                           <a href="mp1.html"><img src="img/makeup/2.jpg "  class="i1"></a></div> 
+                            <div class="card-body">
+                            <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                            </div>
+                        </div>
+                    
+        
+                    
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                <div class="card-body">
+                                <p  style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                </div>
+                            </div>
+                       
+        
+                       
+                            <div class="card">
+                                <div class="card-img text-center">
+                                    <a href="health.html"><img src="img/makeup/2.jpg " class="i1" ></a></div>
+                                    <div class="card-body">
+                                    <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                    </div>
+                                </div>
+                            
+        
+                            
+                                <div class="card">
+                                    <div class="card-img text-center">
+                                        <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                        <div class="card-body">
+                                        <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                        </div>
+                                    </div>
+                        </div>
+                 </div>
+
+                   <!--4-->
+         <div class="my-4"></div>
+         <div class="container">
+            <div class="makeup1">
+                
+                    <div class="card">
+                        <div class="card-img text-center">
+                           <a href="mp1.html"><img src="img/makeup/2.jpg "  class="i1"></a></div> 
+                            <div class="card-body">
+                            <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                            </div>
+                        </div>
+                    
+        
+                    
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                <div class="card-body">
+                                <p  style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                </div>
+                            </div>
+                       
+        
+                       
+                            <div class="card">
+                                <div class="card-img text-center">
+                                    <a href="health.html"><img src="img/makeup/2.jpg " class="i1" ></a></div>
+                                    <div class="card-body">
+                                    <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                    </div>
+                                </div>
+                            
+        
+                            
+                                <div class="card">
+                                    <div class="card-img text-center">
+                                        <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                        <div class="card-body">
+                                        <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                        </div>
+                                    </div>
+                        </div>
+                 </div>
+
+                   <!--5-->
+         <div class="my-4"></div>
+         <div class="container">
+            <div class="makeup1">
+                
+                    <div class="card">
+                        <div class="card-img text-center">
+                           <a href="mp1.html"><img src="img/makeup/2.jpg "  class="i1"></a></div> 
+                            <div class="card-body">
+                            <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                            </div>
+                        </div>
+                    
+        
+                    
+                        <div class="card">
+                            <div class="card-img text-center">
+                                <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                <div class="card-body">
+                                <p  style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                </div>
+                            </div>
+                       
+        
+                       
+                            <div class="card">
+                                <div class="card-img text-center">
+                                    <a href="health.html"><img src="img/makeup/2.jpg " class="i1" ></a></div>
+                                    <div class="card-body">
+                                    <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                    </div>
+                                </div>
+                            
+        
+                            
+                                <div class="card">
+                                    <div class="card-img text-center">
+                                        <a href="health.html"><img src="img/makeup/2.jpg "  class="i1" ></a></div>
+                                        <div class="card-body">
+                                        <p style="font-weight:700;" class="text-center p1">Lip Gloss</p>
+                                        </div>
+                                    </div>
+                        </div>
+                 </div>
+
+
+
+
+
+
+
+
+                 <script>
+                    function openNav(){
+                document.getElementById("mysection").style.width = "100%";
+                }
+                function closeNav(){
+                document.getElementById("mysection").style.width = "0";
+                }
+                
+                function searchMe(){
+                document.getElementById("myform").style.height = "10%";
+                }
+                function Me(){
+                document.getElementById("myform").style.height = "0px";
+                }
+                </script>
+                
+                <script>
+                       function mysignup(){
+                         document.getElementById("mymodal").style.opacity = "0"; 
+                }
+                function mylogin(){
+                      document.getElementById("mymodal").style.opacity = "1"; 
+                }
+                
+                function mysignup(){
+                             document.getElementById("mymodal").style.opacity = "0"; 
+                
+                }
+                </script>
+                
+                
+                <script>
+                    $(document).ready.function() {
+                        $("window").click.function(){
+                            $("mymodal").remove();
+                        }
+                        
+                    }
+                </script>
+                
+                <script>
+                $(document).ready.function() {
+                    $("window").click.function(){
+                        $("myform").css("display","none");
+                    }
+                    
+                }
+                </script>
+</body>
+</html>

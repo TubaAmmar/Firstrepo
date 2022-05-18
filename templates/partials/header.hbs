@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <header class="header ">
+        
+        <div class="menu-icon" onclick="openNav()" ><span class="fas fa-bars" style="color: black;"></span></div>
+        <div class="logo text-center "><a href=""  >PhantomStore</a></div>
+
+        <section class="items1" id="mysection">
+            <ul class="sec-list" >
+                <div  class="menu-icon1" onclick="closeNav()"><span class="fas fa-times"></span></div>
+                <li> <a href="index.hbs" class="sec-link"> Home</a></li>
+                <li> <a href="" class="sec-link" > Shop All</a></li>
+                <li><a href="" class="sec-link"> New Arrival</a></li>
+                <li><a href="" class="sec-link">Flash Deals</a></li>
+                <li><a href="" class="sec-link">Brands</a></li>
+                <li><a href="makeupproduct.hbs" class="sec-link">Makeup</a></li>
+                <li><a href="skincareproduct.html" class="sec-link">Skin Care</a></li>
+                <li><a href="" class="sec-link">Hair Care</a></li>
+                <li><a href="" class="sec-link">Bags</a></li>
+                <li><a href="" class="sec-link">Perfumes</a></li>
+                <li><a href="" class="sec-link">Watches</a></li>
+                <li><a href="" class="sec-link" style="margin-bottom: 7rem;">More</a></li>
+            </ul>
+         </section>
+
+      
+    
+   <div class="responsive1">
+         <div class="searchbox">
+            <input type="text" placeholder="&#xF007; &nbsp; Search Here" class="searchtext">
+            <a href="" class="searchbtn"><span class="fas fa-search" style="color: black;" ></span></a>
+        </div>
+        
+        <div class="menu-user" data-toggle="modal" data-target="#mymodal"><span class="fas fa-user"  onclick="mylogin()"></span></div>
+
+    <a href="" class="menu-cart" ><span class="fas fa-shopping-cart search-icon"></a></div>
+
+
+   
+
+    
+
+    
+ 
+
+</header>
+
+<div class="header2">
+    <div class="container">
+    <a href="index.hbs" >Home</a>
+    <a href="#" >Shop All</a>
+    <a href="#" >New Arrival</a>
+    <a href="#" >Flash Deals</a>
+    <a href="#" >Brands</a>
+    <a href="makeupproduct.hbs" >Make Up</a>
+    <a href="skincareproduct.html" >Skin Care</a>
+    <a href="#" >Hair Care</a>
+    <a href="#" >Perfumes</a>
+    <a href="#" >Bags</a>
+    <a href="#" >Watches</a>
+    <a href="#" >More</a>
+</div>
+</div>
+
+<!--Popup Login-->
+<div class="modal fade" role="dialog" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="text-center heading">Login</h4>
+                <form class="f1">
+                    <label>User-name</label><br>
+                    <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" ><br>
+                    <label>Password</label><br>
+                    <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;"><br>
+                    <p class="para1">Forgot password?</p>
+                    <button type="button" class="btn btn-sucess text-center button1">LogIn
+                
+                </button>
+                <div class="account"> 
+                <p class="para3 text-center">Don't have an account?</p>
+                <span data-toggle="modal" data-target="#mymodal2" class="para4" id="mysignup" onclick="mysignup()" ><a>Sign Up</a></span></div>
+                    
+                
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" role="dialog" id="mymodal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-body">
+            <h2 class=" " style="margin-left: 1.5rem; margin-top: 2rem;">Create an Account</h2>
+            <form class="f1">
+                <label>Name</label> 
+                <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" ><br>
+                
+                <label>Email Address</label>
+                <input type="email" placeholder=" &#xF0e0; &nbsp; your email address" style="font-family: arial, fontawesome;"><br>
+
+                <label>Phone No.</label>
+                <input type="number" placeholder=" &#xf879; &nbsp; your phone #" style="font-family: arial, fontawesome;">
+
+                <label>Password </label>
+                <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;" id="mypassword" > 
+           
+                <span style="position: absolute; top: 75%; right: 20%;" ><i class="fa fa-eye" id="eye"  ></i></span>
+                
+                <button type="button" class="btn btn-sucess text-center button1" style="margin-top: 2rem; margin-bottom: 2rem;">Create an Account
+            
+        </button>
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <script>
+    function openNav(){
+document.getElementById("mysection").style.width = "100%";
+}
+function closeNav(){
+document.getElementById("mysection").style.width = "0";
+}
+
+function searchMe(){
+document.getElementById("myform").style.height = "10%";
+}
+function Me(){
+document.getElementById("myform").style.height = "0px";
+}
+</script>
+
+<script>
+       function mysignup(){
+         document.getElementById("mymodal").style.opacity = "0"; 
+}
+function mylogin(){
+      document.getElementById("mymodal").style.opacity = "1"; 
+}
+
+function mysignup(){
+             document.getElementById("mymodal").style.opacity = "0"; 
+
+}
+</script>
+
+
+<script>
+    $(document).ready.function() {
+        $("window").click.function(){
+            $("mymodal").remove();
+        }
+        
+    }
+</script>
+
+<script>
+$(document).ready.function() {
+    $("window").click.function(){
+        $("myform").css("display","none");
+    }
+    
+}
+</script>
+
+</body>
+</html>
