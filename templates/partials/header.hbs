@@ -15,12 +15,12 @@
         <section class="items1" id="mysection">
             <ul class="sec-list" >
                 <div  class="menu-icon1" onclick="closeNav()"><span class="fas fa-times"></span></div>
-                <li> <a href="index.hbs" class="sec-link"> Home</a></li>
+                <li> <a href="/" class="sec-link"> Home</a></li>
                 <li> <a href="" class="sec-link" > Shop All</a></li>
                 <li><a href="" class="sec-link"> New Arrival</a></li>
                 <li><a href="" class="sec-link">Flash Deals</a></li>
                 <li><a href="" class="sec-link">Brands</a></li>
-                <li><a href="makeupproduct.hbs" class="sec-link">Makeup</a></li>
+                <li><a href="/makeupproduct" class="sec-link">Makeup</a></li>
                 <li><a href="skincareproduct.html" class="sec-link">Skin Care</a></li>
                 <li><a href="" class="sec-link">Hair Care</a></li>
                 <li><a href="" class="sec-link">Bags</a></li>
@@ -54,12 +54,12 @@
 
 <div class="header2">
     <div class="container">
-    <a href="index.hbs" >Home</a>
+    <a href="/" >Home</a>
     <a href="#" >Shop All</a>
     <a href="#" >New Arrival</a>
     <a href="#" >Flash Deals</a>
     <a href="#" >Brands</a>
-    <a href="makeupproduct.hbs" >Make Up</a>
+    <a href="/makeupproduct" >Make Up</a>
     <a href="skincareproduct.html" >Skin Care</a>
     <a href="#" >Hair Care</a>
     <a href="#" >Perfumes</a>
@@ -102,24 +102,24 @@
         <div class="modal-content">
         <div class="modal-body">
             <h2 class=" " style="margin-left: 1.5rem; margin-top: 2rem;">Create an Account</h2>
-            <form class="f1">
+            <form class="f1" action="/" method="POST">
                 <label>Name</label> 
-                <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" ><br>
+                <input type="text" placeholder="&#xF007; &nbsp; Tuba Ammar" style="font-family: arial, fontawesome;" name="username" ><br>
                 
                 <label>Email Address</label>
-                <input type="email" placeholder=" &#xF0e0; &nbsp; your email address" style="font-family: arial, fontawesome;"><br>
+                <input type="email" placeholder=" &#xF0e0; &nbsp; your email address" style="font-family: arial, fontawesome;" name="useremail"><br>
 
                 <label>Phone No.</label>
-                <input type="number" placeholder=" &#xf879; &nbsp; your phone #" style="font-family: arial, fontawesome;">
+                <input type="number" placeholder=" &#xf879; &nbsp; your phone #" style="font-family: arial, fontawesome;" name="userphone">
 
                 <label>Password </label>
-                <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;" id="mypassword" > 
+                <input type="password" placeholder=" &#xF023; &nbsp; your password" style="font-family: arial, fontawesome;" id="mypassword" name="userpassword"> 
            
                 <span style="position: absolute; top: 75%; right: 20%;" ><i class="fa fa-eye" id="eye"  ></i></span>
                 
-                <button type="button" class="btn btn-sucess text-center button1" style="margin-top: 2rem; margin-bottom: 2rem;">Create an Account
+                <button type="button" class="btn btn-sucess text-center button1" style="margin-top: 2rem; margin-bottom: 2rem;"><input type="submit" value="Create an Account"></button>
             
-        </button>
+        
             </form>
         </div>
         </div>
