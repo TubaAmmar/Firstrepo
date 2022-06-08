@@ -1,10 +1,12 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
 const Register = require("./module/db");
+const auth = require("./middleware/auth");
 const bcrypt = require("bcryptjs");
-
+const cookieParser = require("cookie-parser");
 const port = process.env.PORT || 8000;
 
 
@@ -22,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(staticPath));
-
+app.use(cookieParser());
 
 app.set("view engine", "hbs");
 app.set("views", templatePath);
@@ -38,13 +40,37 @@ app.get("/signup", function (req, res){
 });
 
 
+app.get("/logout", async function (req, res){
+try{
+req.user.tokens = req.user.tokens.filter((currElement) => {
+  return currElement.token !== req.token
+});
+res.clearCookie("jwt");
+console.log(logout);
+await req.user.save();
+res.render("loginpage");
+} catch(error){
+  res.status(500).send(error);
+}});
+
+
+
+
+
+
+
+
+
+
+
 app.get("/index", function (req, res){
   res.render('index');
 });
 
 
 
-app.get("/makeupproduct", function (req, res){
+app.get("/makeupproduct", auth ,  function (req, res){
+  //console.log(`best cookie ${req.cookies.jwt}`);
   res.render('makeupproduct');
 });
 
@@ -65,6 +91,11 @@ app.post("/", async (req, res) => {
    const token = await firstRegister.generateAuthtoken();
    
    console.log("the token part" + token);
+
+   res.cookie("jwt" , token, {
+     expires:new Date(Date.now() + 60000),
+     httpOnly:true
+   });
    
    const registered = await firstRegister.save();
    res.status(201).render("loginpage");
@@ -87,6 +118,12 @@ const password =  req.body.password;
  const token = await userdata.generateAuthtoken();
    
  console.log("the token part" + token);
+
+ res.cookie("jwt" , token, {
+  expires:new Date(Date.now() + 60000),
+  httpOnly:true
+});
+
 
 
  if ( isMatch){

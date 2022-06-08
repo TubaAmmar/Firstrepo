@@ -111,24 +111,31 @@ body {
   -moz-osx-font-smoothing: grayscale;      
 }
 </style>
-
+<script>
+  function myfun(){
+    var a = document.myform.email.value;
+    if (a.indexOf('@')<=0){
+      document.getElementById("message").innerHTML = "*Invalid Email";
+      return false;
+    }
+    if ((a.charAt(a.length-4)!='.')&& (a.charAt(a.length-3)!='.')){
+            document.getElementById("message").innerHTML = "*Invalid Email";
+    }
+  }
+</script>
 </head>
 <body>
       {{>loginheader}}
 
 <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form" action="/login" method="post">
-      <input type="text" placeholder="username"/ name="email">
-      <input type="password" placeholder="password"/     name="password">
-      <button>login</button>
+   
+    <form class="login-form" action="/login" method="post" name="myform" onsubmit="return mufunc()">
+      <input type="text" placeholder="email"/ name="email">
+          <span id="message"></span>
+      <input type="password" placeholder="password"/     name="password"><br>
+  
+      <button value="login" type="submit" >log in</button>
       <p class="message">Not registered? <a href="/signup">Create an account</a></p>
     </form>
   </div>

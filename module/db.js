@@ -8,7 +8,7 @@ const  connectionParams = {
    
 }
 
-mongoose.connect("mongodb://localhost:27017/firstdatabase" , connectionParams).then(() => console.log("connection successful")).catch((err) => console.log(err));
+mongoose.connect(process.env.DATABASE, connectionParams).then(() => console.log("connection successful")).catch((err) => console.log(err));
 
 
 const schema1 = new mongoose.Schema({
@@ -50,7 +50,7 @@ const schema1 = new mongoose.Schema({
 schema1.methods.generateAuthtoken = async function(){
     try{
         console.log(this.id);
-        const token = jwt.sign({_id:this._id.toString()}, "mynameistubaammarwebdeveloper");
+        const token = jwt.sign({_id:this._id.toString()}, process.env.SECRETKEY);
         this.tokens = this.tokens.concat({token:token});
         await this.save();
         return token;
